@@ -121,4 +121,4 @@ Liao, Y., Smyth, G.K. & Shi, W. featureCounts: an efficient general purpose prog
 
 ## License
 
-MIT License — see [LICENSE](LICENSE) for details. This code is shared for demonstration and educational purposes; verify results independently before relying on them in any downstream analysis.
+MIT License — see [LICENSE](LICENSE) for details.
