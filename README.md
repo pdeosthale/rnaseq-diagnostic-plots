@@ -53,9 +53,9 @@ Good: more than 60% exonic reads. High intronic reads (more than 40%) suggest ge
 
 ### Library size distribution (Plot 03)
 Good: consistent depth across samples, median 20-80M reads for blood RNA-seq. Flag samples below 20% of the median (dotted red line). Always cross-reference with gene detection: low library size AND low gene detection is a strong indicator of a failed sample.
-Note: One CoV_other sample shows unusually high library size (~130M reads,approximately 2.5x the median). This sample passes gene detection and PCA QC checks and was retained: high library size alone is not grounds for removal without additional evidence of quality failure.
+Note: One CoV_other sample shows unusually high library size (~130M reads, approximately 2.5x the median). This sample passes gene detection and PCA QC checks and was retained: high library size alone is not grounds for removal without additional evidence of quality failure.
 ### Gene detection per sample (Plot 04)
-Good: 12,000-18,000 genes detected per sample for blood RNA-seq, consistent within cohorts. Samples below 5,000 detected genes should be investigated and likely removed.
+Good: 12,000-25,000 genes detected per sample for blood RNA-seq, consistent within cohorts. Samples below 5,000 detected genes should be investigated and likely removed.
 
 ### RNA biotype distribution (Plot 05)
 Good: more than 70% protein-coding (dashed line), consistent across all samples. High rRNA suggests failed rRNA depletion. A sample with an unusual biotype profile relative to its cohort mates may be mislabeled or from a failed library prep.
