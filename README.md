@@ -14,13 +14,13 @@ This is an independent secondary analysis of publicly available data from GEO (G
 
 ## Dataset
 
-**GSE161731** — Blood RNA-seq from patients with respiratory infections and healthy controls. McClain et al. *Nature Communications* 12, 1079 (2021). https://doi.org/10.1038/s41467-021-21289-y
+**GSE161731**: Blood RNA-seq from patients with respiratory infections and healthy controls. McClain et al. *Nature Communications* 12, 1079 (2021). https://doi.org/10.1038/s41467-021-21289-y
 
 Data downloads automatically from GEO on first run; no manual download required.
 
 ## Plots Covered
 
-### Stage 1 — Pre-alignment QC (raw FASTQ)
+### Stage 1: Pre-alignment QC (raw FASTQ)
 
 > These plots require raw FASTQ files in practice. Simulated data illustrates typical patterns. Generate with FastQC and aggregate with MultiQC.
 
@@ -29,19 +29,19 @@ Data downloads automatically from GEO on first run; no manual download required.
 | 01. Per-base sequence quality | Simulated | Phred quality scores across 150bp read positions; good vs 3' degradation | FastQC + MultiQC |
 | 02. Genomic feature assignment | Simulated | Exon/intron/intergenic/rRNA fractions; good vs four failure modes | featureCounts (Subread) |
 
-### Stage 2 — Count-level QC (after alignment and counting)
+### Stage 2: Count-level QC (after alignment and counting)
 
 | Plot | Data | What it shows |
 |---|---|---|
-| 03. Library size distribution | Real | Total mapped reads per sample — flags low-depth samples |
-| 04. Gene detection per sample | Real | Number of genes detected per sample — cross-reference with library size |
+| 03. Library size distribution | Real | Total mapped reads per sample, used to flag low-depth samples |
+| 04. Gene detection per sample | Real | Number of genes detected per sample, to cross-reference with library size |
 | 05. RNA biotype distribution | Real | Proportion of reads mapping to protein-coding, ncRNA, rRNA, etc. |
 
-### Stage 3 — Sample-level QC (outlier detection)
+### Stage 3: Sample-level QC (outlier detection)
 
 | Plot | Data | What it shows |
 |---|---|---|
-| 06. PCA — outlier detection | Real | Identifies extreme samples more than 3 SD from the mean on PC1 or PC2 |
+| 06. PCA outlier detection | Real | Identifies extreme samples more than 3 SD from the mean on PC1 or PC2 |
 
 ## Key Interpretations
 
@@ -101,7 +101,7 @@ data/                               # Downloaded from GEO on first run (not trac
 
 1. Clone this repository
 2. Open `scripts/01_rnaseq_diagnostic_plots.R` in RStudio
-3. Run from top to bottom — data downloads automatically on first run
+3. Run from top to bottom, and the data downloads automatically on first run
 4. All 6 figures saved to `figures/`
 
 ## Limitations
@@ -121,4 +121,4 @@ Liao, Y., Smyth, G.K. & Shi, W. featureCounts: an efficient general purpose prog
 
 ## License
 
-MIT License — see [LICENSE](LICENSE) for details.
+MIT License. See [LICENSE](LICENSE) for details.
